@@ -1,27 +1,65 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import NewsFeed from './components/newsFeed.js';
+import SearchComponent from './components/searchComponent.js';
+import StockChart from './components/stockChart.js';
+import Hooks from './components/hooks.js'
 import './App.css';
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {}
+  }
+
+  onSelectedTickerChange = (ticker) => {
+    console.log(ticker)
+    this.setState({
+      selectedTicker: ticker
+    })
+  }
+
+
+  componentWillMount(){
+    this.getChartData();
+  }
+
+  getChartData(){
+    this.setState({
+      chartData:{
+        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        datasets:[
+          {
+            data:[
+              61759,
+              181045,
+              153060,
+              106519,
+              105162,
+              95072, 
+              84739
+            ],
+            backgroundColor:[
+              'rgba(54, 162, 235, 0.6)',
+            ]
+          }
+        ]
+      }
+    });
+  }
+
+
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <StockChart chartData={this.state.chartData} stock="Stock" />
+        <Hooks />
+        <SearchComponent />
+        <NewsFeed />
+
       </div>
-    );
+    )
   }
 }
 

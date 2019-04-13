@@ -31,3 +31,123 @@
     transform: rotate(360deg);
   }
 }
+body{
+  font-family: sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #182848, #4b6cb7); 
+
+}
+.wrapper{
+  width: 1000px;
+  max-width: 1000px;
+  margin: 0;
+}
+div{
+
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+h2{
+  font-size: 20px;
+  color: white;
+}
+img{
+  width: 100%;
+  max-width: 100%;
+  
+}
+.flexCard{
+  width: calc(100%/3)
+}
+.flexWrap{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.plusIcon{
+  width: 15px;
+  margin: 3px;
+}
+section{
+  display: flex;
+  flex-wrap: wrap;
+}
+span{
+  padding: 0 10px;
+}
+ul{
+  list-style: none;
+  padding-left: 0;
+  border: 1px solid black;
+  margin: 0;
+}
+li{
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+li:hover{
+  background: rgb(133, 133, 133);
+}
+li:nth-of-type(2n +1){
+  background: rgba(235, 228, 228, 0.055);
+}
+li:nth-of-type(2n +1):hover{
+  background: rgb(133, 133, 133);
+}
+form{
+  display: flex;
+}
+.flexItem{
+  flex: 1;
+  padding: 10px 0;
+  font-size: 20px;
+}
+.submit{
+  color: white;
+  background: black;
+  transition: 0.3s ease-in;
+}
+.submit:hover{
+  background: rgb(133, 133, 133);
+}
+.search{
+  font-size: 20px;
+  text-align: center;
+}
+.plusIcon:hover{
+  
+}
+.myChart{
+  min-height: 600px;
+  height: 600px;
+}
+footer{
+  text-align: center;
+}
+/* aside{
+  width: 250px;
+  min-width: 250px;
+  margin-left: 50px;
+  align-self: center;
+  justify-self: center;
+
+} */
+.flexSpaceBetween{
+  display: flex; 
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.stockAndGraphComponent{
+}
+@media only screen and (max-width: 600px) {
+  .flexCard{
+      width: 100%;
+  }
+}
