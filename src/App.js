@@ -3,6 +3,7 @@ import NewsFeed from './components/newsFeed.js';
 import SearchComponent from './components/searchComponent.js';
 import StockChart from './components/stockChart.js';
 import Hooks from './components/hooks.js'
+import Footer from './components/footer.js'
 import './App.css';
 
 class App extends Component {
@@ -12,13 +13,19 @@ class App extends Component {
     this.state = {}
   }
 
-  onSelectedTickerChange = (ticker) => {
-    console.log(ticker)
-    this.setState({
-      selectedTicker: ticker
-    })
-  }
+  // onSelectedTickerChange = (ticker) => {
+  //   console.log(ticker)
+  //   this.setState({
+  //     selectedTicker: ticker
+  //   })
+  // }
 
+   onSelectedQuery = (search) =>{
+     console.log(search)
+     this.setState({
+       userSearchQuery: search
+     })
+   }
 
   componentWillMount(){
     this.getChartData();
@@ -54,10 +61,10 @@ class App extends Component {
     return (
       <div className="App">
         <StockChart chartData={this.state.chartData} stock="Stock" />
-        <Hooks />
         <SearchComponent />
         <NewsFeed />
-
+        <Hooks />
+        <Footer />
       </div>
     )
   }

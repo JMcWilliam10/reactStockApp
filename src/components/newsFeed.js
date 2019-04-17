@@ -50,7 +50,7 @@ class NewsFeed extends Component {
   }
 
   componentDidMount(){
-    this.getNews('apple')
+    this.getNews('lyft')
 }
 
   render(){

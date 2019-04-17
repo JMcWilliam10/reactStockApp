@@ -5,12 +5,17 @@ class SearchComponent extends Component{
     constructor(props){
         super(props)
         this.state = {
-            query: []
+            query: ''
         };
     }
+
     render(){
         return(
-            <div>Search Component</div>
+            <form action="">
+                <label for="search"></label>
+                <input type="text" placeholder="Company Name" name="search a term" id="search" className="search flexItem"/>
+                <input type="submit" value="submit" className="submit flexItem"/>
+            </form>
         )
     }
 }

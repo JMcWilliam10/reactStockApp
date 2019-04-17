@@ -61,6 +61,9 @@ img{
   max-width: 100%;
   
 }
+.ticker{
+  color: rgb(255, 255, 255)
+}
 .flexCard{
   width: calc(100%/3)
 }
@@ -128,6 +131,8 @@ form{
   height: 600px;
 }
 footer{
+  color: white;
+  background: black;
   text-align: center;
 }
 /* aside{
@@ -146,8 +151,27 @@ footer{
 }
 .stockAndGraphComponent{
 }
+.hookCounter{
+  color: white;
+}
 @media only screen and (max-width: 600px) {
   .flexCard{
       width: 100%;
+  }
+  .wrapper{
+      width: 500px;
+      max-width: 500px;
+      margin: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .flexCard{
+      width: 100%;
+  }
+  .wrapper{
+      width: 400px;
+      max-width: 400px;
+      margin: 0;
   }
 }
